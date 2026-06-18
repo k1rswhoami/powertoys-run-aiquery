@@ -2,7 +2,8 @@
 
 A PowerToys Run plugin that lets you ask AI questions directly from the launcher.
 
-<img width="2878" height="1712" alt="1" src="https://github.com/user-attachments/assets/9959095f-24b7-469b-8e2c-3f90c33e2dbf" />
+<img width="1152" height="1130" alt="1" src="https://github.com/user-attachments/assets/f00e157c-538e-4fe0-b9d1-9f46daa3ad4f" />
+
 
 
 ## Features
