@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:conductofcode.io)",
+      "WebFetch(domain:deepwiki.com)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(python --version; Write-Host \"---\"; git --version; Write-Host \"---\"; \\(Get-Command dotnet -ErrorAction SilentlyContinue\\)?.Source ?? \"dotnet: not found\"; Write-Host \"---\"; \\(Get-Command code -ErrorAction SilentlyContinue\\)?.Source ?? \"vscode: not found\"; Write-Host \"---\"; $env:PROCESSOR_ARCHITECTURE)",
+      "PowerShell(& \"C:\\\\Program Files\\\\dotnet\\\\dotnet.exe\" --version; Write-Host \"---\"; & \"C:\\\\Program Files\\\\dotnet\\\\dotnet.exe\" --list-sdks; Write-Host \"---\"; & \"C:\\\\Program Files\\\\dotnet\\\\dotnet.exe\" --list-runtimes)",
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\\\\dotnet\\\\sdk\" -ErrorAction SilentlyContinue | Select-Object Name; Write-Host \"---\"; Get-ChildItem \"C:\\\\Program Files \\(x86\\)\\\\Microsoft Visual Studio\" -ErrorAction SilentlyContinue | Select-Object Name; Write-Host \"---\"; \\(Get-Command msbuild -ErrorAction SilentlyContinue\\)?.Source ?? \"msbuild: not found\")",
+      "PowerShell(winget *)",
+      "PowerShell([System.Reflection.AssemblyName]::GetAssemblyName\\(\"$env:LOCALAPPDATA\\\\PowerToys\\\\Wox.Plugin.dll\"\\).Version; [System.Reflection.AssemblyName]::GetAssemblyName\\(\"$env:LOCALAPPDATA\\\\PowerToys\\\\PowerToys.Common.UI.dll\"\\).Version)",
+      "PowerShell(dotnet build *)",
+      "PowerShell([System.Reflection.Assembly]::LoadFrom\\(\"$env:LOCALAPPDATA\\\\PowerToys\\\\PowerToys.Settings.UI.Lib.dll\"\\).GetTypes\\(\\) | Select-Object -ExpandProperty Namespace | Sort-Object -Unique; Write-Host \"===\"; [System.Reflection.Assembly]::LoadFrom\\(\"$env:LOCALAPPDATA\\\\PowerToys\\\\PowerToys.ManagedCommon.dll\"\\).GetTypes\\(\\) | Select-Object -ExpandProperty Namespace | Sort-Object -Unique)",
+      "PowerShell([System.Reflection.Assembly]::LoadFrom\\(\"$env:LOCALAPPDATA\\\\PowerToys\\\\Wox.Plugin.dll\"\\).GetTypes\\(\\) | Where-Object { $_.Name -match \"IPlugin|IContext|ISetting|IDelayed|ToolTip|ContextMenu\" } | Select-Object FullName, Namespace)",
+      "PowerShell($asm = [System.Reflection.Assembly]::LoadFrom\\(\"$env:LOCALAPPDATA\\\\PowerToys\\\\Wox.Plugin.dll\"\\); $asm.GetType\\(\"Wox.Plugin.ISettingProvider\"\\).GetMethods\\(\\) | Select-Object Name, ReturnType; Write-Host \"===\"; $asm2 = [System.Reflection.Assembly]::LoadFrom\\(\"$env:LOCALAPPDATA\\\\PowerToys\\\\PowerToys.Settings.UI.Lib.dll\"\\); $asm2.GetType\\(\"Microsoft.PowerToys.Settings.UI.Library.PluginAdditionalOption\"\\).GetProperties\\(\\) | Select-Object Name, PropertyType | Select-Object -First 15)",
+      "PowerShell($asm2 = [System.Reflection.Assembly]::LoadFrom\\(\"$env:LOCALAPPDATA\\\\PowerToys\\\\PowerToys.Settings.UI.Lib.dll\"\\); [Enum]::GetNames\\($asm2.GetType\\(\"Microsoft.PowerToys.Settings.UI.Library.PluginAdditionalOption+AdditionalOptionType\"\\)\\))",
+      "PowerShell($pt = Get-Process -Name \"PowerToys\" -ErrorAction SilentlyContinue; if \\($pt\\) { $pt | Stop-Process -Force; Start-Sleep -Seconds 2 }; Start-Process \"$env:LOCALAPPDATA\\\\PowerToys\\\\PowerToys.exe\"; Write-Host \"PowerToys restarted\")",
+      "PowerShell($asm = [System.Reflection.Assembly]::LoadFrom\\(\"$env:LOCALAPPDATA\\\\PowerToys\\\\PowerToys.Settings.UI.Lib.dll\"\\); $t = $asm.GetType\\(\"Microsoft.PowerToys.Settings.UI.Library.PowerLauncherPluginSettings\"\\); $t.GetProperties\\(\\) | Select-Object Name)",
+      "PowerShell($asm = [System.Reflection.Assembly]::LoadFrom\\(\"$env:LOCALAPPDATA\\\\PowerToys\\\\Wox.Plugin.dll\"\\); $t = $asm.GetType\\(\"Wox.Plugin.Result\"\\); $t.GetProperties\\(\\) | Where-Object { $_.Name -match \"Highlight|Title|Sub\" } | Select-Object Name, PropertyType)",
+      "PowerShell(gh *)"
+    ]
+  },
+  "disabledMcpjsonServers": [
+    "adremote-mcp"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "ID": "B3F4A2C1D8E5497F9A0B1C2D3E4F5A6B",
+  "ActionKeyword": "?",
+  "IsGlobal": false,
+  "Name": "AI Query",
+  "Author": "AIQuery",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "",
+  "ExecuteFileName": "Community.PowerToys.Run.Plugin.AIQuery.dll",
+  "IcoPathDark": "Images\\ai.dark.png",
+  "IcoPathLight": "Images\\ai.light.png"
+}
